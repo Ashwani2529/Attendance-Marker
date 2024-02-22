@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.back{
+  /* background-image: url('../public/wall.png'); */
+background-size:contain;
+background-repeat: no-repeat;
+/* z-index: 10; */
+}
+#signupbox{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+ /* margin-top: 34%; */
+}
