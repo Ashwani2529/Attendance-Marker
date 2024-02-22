@@ -22,24 +22,30 @@ const Qrs = () => {
   return (
     <>
     <div style={{ display: "flex", flexWrap: "wrap",padding:"3%",margin:"5%",gap:"2%"}}>
-      {data?.map((user) => (
-        <div
-          style={{marginTop:"1%"
- ,           border: "1px solid black",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            
-          }}
-        >
-          <img
-            src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${baseUrl}${user.uniqueID}`}
-            style={{ padding: "50px", height: "300px", width: "300px" }}
-          ></img>
-          <h2>{user.uniqueID}</h2>
-          <h2>{user.name}</h2>
-        </div>
-      ))}
+    {data ? (
+  data.map((user) => (
+    <div
+      style={{
+        marginTop: "1%",
+        border: "1px solid black",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <img
+        src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${baseUrl}${user.uniqueID}`}
+        style={{ padding: "50px", height: "300px", width: "300px" }}
+        alt={`QR Code for ${user.name}`}
+      />
+      <h2>{user.uniqueID}</h2>
+      <h2>{user.name}</h2>
+    </div>
+  ))
+) : (
+  <h1>Loading...</h1>
+)}
+
    
     </div>
      <button type="submit" style={{width:"100px",display:"flex",alignItems:"center",justifyContent:"center",marginLeft:"40%",marginBottom:"10px"}} className='addUserButton' onClick={()=>navigate('/')}>Home</button></>

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import { MDBCard, MDBListGroup, MDBListGroupItem } from 'mdb-react-ui-kit';
+import { MDBCard, MDBListGroup } from 'mdb-react-ui-kit';
 import { useParams } from 'react-router-dom';
 import CustomListItem from './CustomListItem';
 export default function Card() {
@@ -18,6 +18,7 @@ export default function Card() {
   }
   useEffect(()=>{
     getUser();
+    //eslint-disable-next-line
   },[])
   return (
     <MDBCard style={{padding:"10%"}}>
