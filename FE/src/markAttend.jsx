@@ -13,7 +13,7 @@ const MarkAttend = () => {
             "Content-Type":"application/json"
         },
         body:JSON.stringify({
-            uniqueID:"CDRC-"+enroll
+            uniqueID:"SCDRC-"+enroll
         })
         });
         if(resp.status==200){
