@@ -54,7 +54,7 @@ function App() {
       alert("Please fill all the fields");
       return;
     }
-    let enroll="CDRC-"+uniqueID;
+    let enroll="SCDRC-"+uniqueID;
     const resp=await fetch("https://attendance-marker-backend.onrender.com/api/user/signup",{
       method:"POST",
       headers:{
